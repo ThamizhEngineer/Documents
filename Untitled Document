@@ -1,0 +1,26 @@
+L_IMP_SAMAST_APP
+INT_SAMAST_APPLN
+EXT_SAMAST_APPLN_APPROVAL
+T_SLDC_NOC
+T_SLDC_NOC_LINE
+T_GEN_OTHER_CHARGES
+
+
+
+samast 
+
+Sldc Nocs 
+  1.SAMAST Noc Import 
+    --> TAbScreens  1.samast Application Import -> importsamast Application. Table -> L_IMP_SAMAST_APP)
+    --> TAbScreens  2.samst Approval Import ->import samast Approval. Table -> L_IMP_SAMAST_APP)
+
+  2.SLDC NOcs EDC Approval
+     --> TAbScreens  1.Seller ->(Nocseller ) based on EdcName,NocCode &status search filter is set. 
+
+            In status {CREATED ,EDC-APPROVED ,EDC-REJECTED ,DIRECTOR-APPROVED ,DIRECTOR-REJECTED}
+
+    Action -> SLDCNoc form component with particular data ->( buttons = > save ,print,approve,reject,back),(Remarks => Technical,Legal,Commercial)->data from edc.
+Email is sent 
+ 
+     --> TAbScreens  2.Buyer ->(NocBuyer) based on EdcName,NocCode &status search filter is set.
+

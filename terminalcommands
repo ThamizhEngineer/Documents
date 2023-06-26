@@ -1,0 +1,122 @@
+
+1.check server port 
+    netstat -tlpun
+
+2.Killing port
+    sudo kill -9 $(sudo lsof -t -i:8080)
+
+3. Installing s/w
+     sudo apt -get update
+    sudo apt install
+
+4.Remove s/w
+    sudo apt remove
+
+5.permission to folder 
+
+    chmod +x <foldername>
+
+6. to copy file
+    
+   sudo cp <current folder path>  <new folder path>
+
+7. to delete file
+
+   sudo rm-rf <file name>
+
+8.to check container ID
+    sudo docker ps -a
+
+9.Finding s/w in terminal
+    whereis netbeans
+    sudo find / -name netbeans 2> /dev/null
+
+10. stop s/w
+    sudo service tomcat<version> status ==> running or paused 
+    sudo service tomcat<version> stop ==>stop service  
+    
+ 11.connecting vpn for smartofz
+
+    sudo apt install openvpn -y
+
+sudo openvpn --config /home/thamizh/Downloads/thamizhiselvi.ovpn     
+
+12.log file path checking path
+    /opt/scrunch-work/so/dev/log
+    kafka path -->/opt/scrunch-work/common/kafka/logs
+
+13.what are apps run in our system
+    ls -l -a
+14.finding mac address 
+        ifconfig
+15. `find device name 
+        hostname 
+    change hostname
+    sudo hostnamectl set-hostname R1
+
+
+16.How to get tar files from dev server
+   sudo  tar -czvf scrunch.tar.gz(filename) /opt/scrunch(folder path) -->zip file located in nivin path --> ~ cd home/nivin
+
+    sudo scp scrunch.tar.gz shree@192.168.1.34:/tmp 
+TEMP TO OPT MOVE CMD 
+    inoursys -> tmp file .. cd /tmp
+    ls
+    sudo mv scrunch.tar.gz /opt
+    sudo tar zxvf scrunch.tar.gz
+    ls
+    
+16 b).. 
+        https://www.geeksforgeeks.org/how-to-compress-and-extract-files-using-the-tar-command-on-linux/
+
+17.ssh port not run means 
+    netstat -tlpun
+    sudo apt-get install openssh-server
+    sudo service ssh start
+    sudo service ssh enable 
+
+18 .creating sub menu for id
+    auth_sub_menu (auth_feature_id) ->65
+    auth_role (auth_role_id) ->177
+    auth_role_feature -> auth_feature_id & auth_role_id 
+
+
+    creating main menu 
+        creating sub menu means it automatically works..
+
+19.accessing mysql in terminal
+   docker exec -it mysql_db bash
+     mysql -u root -p
+    enter password: scrunch123
+
+
+20.zip a file with datetimestamp
+    TESTDATE= $(date+%b-%d-%y)
+    echo $Testdate
+    zipfile="${DEST}/${TESTDATE}${d}${BASENAME}.zip"Filename
+
+21.snx installation for vpn 
+    sudo apt update
+    sudo apt install libpam0g:i386 libx11-6:i386 libstdc++6:i386 libstdc++5:i386
+    cd Downloads
+    wget https://starkers.keybase.pub/snx_install_linux30.sh?dl=1 -O snx_install.sh
+    ls
+    ./snx_install.shexit
+    sudo ./snx_install.sh
+    ls
+    cd ..
+    snx -version
+22.userrole setup in db
+auth_functionality ---> (auth_functionality id)=> auth_feature --> (auth_feature_id)=> auth_sub_menu <= auth_menu 
+(auth_role)=>auth_role_feature<=(auth_feature_id)
+
+23.creating new user 
+ 
+          sudo adduser thamizh
+         sudo usermod -aG sudo thamizh
+        sudo reboot
+
+
+open as root sudo chmod -R 777 lombok.jar 
+in sts jar open in terminal sudo chmod +x lombok-1.18.22.jar
+

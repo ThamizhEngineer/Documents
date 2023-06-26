@@ -1,0 +1,30 @@
+Angular cli change at run time
+--------------------------------
+
+install at one time
+--------------------
+1. nvm install v15
+2. npm install -g @angular/cli@15.1.1
+3. nvm use 14
+4. npm install -g @angular/cli@1.4.4
+
+1.  --> nvm install v15 (install at once)
+
+    --> nvm use 15      (when u need to change node version use this command)
+
+2.  --> nvm install v14 (install at once)
+    
+    --> nvm use 14 (when u need to change node version use this command)
+ 
+check version
+--------------
+node -->        node -v
+angular cli --> ng version
+
+use angular cli u want  
+------------------------
+npx -p @angular/cli@1.4.4 npm start
+npx -p @angular/cli@1.4.4 ng serve (or) serve (or) test
+
+
+

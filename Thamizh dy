@@ -1,0 +1,56 @@
+EDC Login Seller name to channged as Seller in Existing records .
+    home -> new folder -> named as "Deploy10-08-2022"-> 2folder (Services),(UI).
+    In rep development -> clone -> download as zip -> Extract into new folder(oaproj).
+
+get tar files for services.
+    In oaproj-> >oa-shared ->right click ->open in terminal -> mvn install ,mvn package.
+                oa-doc-ser ->right click ->open in terminal ->mvn package.
+
+get tar files for UI.
+    In oaproj -> oa-ui-bo -> having a file ("prod.sh" ) <- executes these cmds in terminal one by one . before executing npm install .
+
+For Service:
+    1.server -> mkdir -p /opt/oa-backups/11-08-2022/
+                mkdir -p /opt/oa-deployments/11-08-2022/
+             cp -r /opt/oa/code/open-access-eb-build/builds/ /opt/oa-backups/26-08-2022/
+            exit
+
+    2.local-> scp * root@10.251.45.83:/opt/oa-deployments/11-08-2022/
+            root@123
+
+    3.server -> ssh root@10.251.45.83
+            cd /opt/oa-deployments/26-08-2022/ (check war file is generated.)
+            cp -rf /opt/oa-deployments/11-08-2022/* /opt/oa/code/open-access-eb-build/builds  
+            y
+
+            fuser -k 4206/tcp
+            fuser -k 4208/tcp
+            fuser -k 4212/tcp
+            fuser -k 4214/tcp
+            fuser -k 4216/tcp
+    4./root/restart-all-services.sh
+    5.netstat -tulpn
+    to check log -> tail -400f /opt/oa/log/oa-document-service/startup.log
+
+For UI:
+
+
+    1.server -> mkdir -p /opt/oa-backups/11-08-2022/
+            mkdir -p /opt/oa-deployments/11-08-2022/
+             
+            exit
+
+    2.local-> scp * root@10.251.45.85:/opt/oa-deployments/11-08-2022/
+            root@123
+
+    3.server -> ssh root@10.251.45.85
+            cd /opt/oa-deployments/11-08-2022/ (check war file is generated.)
+            cp -rf /opt/oa-deployments/11-08-2022/* /opt/oa/code/open-access-eb-build/builds  
+            y
+
+           
+    /root/restart-all-ui.sh
+
+16-aug-2022-3/
+
+
